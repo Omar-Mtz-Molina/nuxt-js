@@ -7,16 +7,10 @@
 
 <script setup>
     const { id } = useRoute().params;
-    if(/^\d+$/.test(id)){
-      throw createError({
-        statusCode: "500",
-        statusMessage: "Param Type Is Invalid"
-      })
-    }
-    /* definePageMeta({
+    definePageMeta({
         validate: async (route) => {
             const nuxtApp = useNuxtApp();
             return /^\d+$/.test(route.params.id);
         }
-    }) */
+    })
 </script>
